@@ -100,15 +100,11 @@ That’s it. Now you should be able to play connect four against a friend.
 
 ## 4 – Challenges
 
-Change the colours
-
-Draw squares instead of circles for the spaces
-
-Add logic to detect a full row
-
-Create a random computer player
-
-How would you detect a winner (advanced!)
+* Change the colours
+* Draw squares instead of circles for the spaces
+* Add logic to detect a full row
+* Create a random computer player
+* How would you detect a winner (advanced!)
 
 ## 5 – Whole Solution
 
