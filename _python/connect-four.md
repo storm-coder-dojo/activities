@@ -1,3 +1,9 @@
+---
+Title: Connect four
+category: python
+order: 1
+---
+
 # Connect four
 
 In this activity, we will be re- making the connect four game with the Python programming language and using the Turtle Library.
