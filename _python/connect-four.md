@@ -2,7 +2,7 @@
 Title: Connect four
 category: python
 order: 1
-layout: page
+layout: default
 ---
 
 # Connect four
