@@ -2,8 +2,9 @@
 Title: Noughts and crosses
 category: python
 order: 1
+description: Noughts and crosses using the python language and turtle drawing library
 ---
-In this activity, we will be re- making Noughts and Crosses with the
+In this activity, we will be re-making Noughts and Crosses with the
 Python programming language and using the Turtle Library.
 
 Noughts and Crosses is a game where two players place an X or O in a 3
@@ -13,8 +14,10 @@ a line (horizontal, vertical, or diagonal).
 We will write a program that will draw out the grid that the marks are
 drawn on and record the clicks of the players drawing a mark.
 
-1-- The grid
-============
+**Taken and adapted from:**
+[Free Python Games](http://www.grantjenks.com/docs/freegames/tictactoe.html)
+
+## 1-- The grid
 
 Go to trinkiet.io and start a new Python project:
 <http://bit.ly/pythontrinket> (log into your account if you have one
@@ -58,8 +61,7 @@ grid()
 update()
 ```
 
-2 -- Drawing a mark
-===================
+## 2 -- Drawing a mark
 
 All the code in the following sections should go below the `grid` function
 and *before* the block starting `Screen()`... unless otherwise noted
@@ -84,8 +86,7 @@ def drawo(x, y):
     circle(62)
 ```
 
-3 -- Remembering which player goes when
-=======================================
+## 3 -- Remembering which player goes when
 
 There are two players, nought and cross. Each draws a mark one after the
 other. We need to record whose turn it is. Create a dictionary, `state`
@@ -96,11 +97,10 @@ state = {'player': 0}
 players = [drawx, drawo]
 ```
 
-4 -- A little maths
-===================
+## 4 -- A little maths
 
 We're going to record where the user clicks the screen but we'll need to
-get a location that matches up with the grid' squares each time. Define
+get a location that matches up with the grid's squares each time. Define
 a function `floor` that takes a parameter `value`.
 
 ```python
@@ -108,8 +108,7 @@ def floor(value):
     return ((value + 200) // 133) * 133 - 200
 ```
 
-5 -- Tap it
-===========
+## 5 -- Tap it
 
 We now have everything we need to write a function that organises
 drawing the correct type of mark in the right place. Define a function
@@ -130,12 +129,11 @@ This checks which player should be placing a counter (cross always
 starts), draws the correct mark and finally changes the player for the
 next turn.
 
-6 -- Final set up to play the game
-==================================
+## 6 -- Final set up to play the game
 
 We now need to call the tap function when the screen is clicked. Right
 at the end of all the code put the following (after the block beginning
-`Screen()`... finishing `grid()`):
+`Screen()`... finishing `update()`):
 
 ```python
 Screen().onscreenclick(tap)
@@ -145,8 +143,7 @@ done()
 That's it. Now you should be able to play Noughts and Crosses against a
 friend.
 
-7-- Challenges
-==============
+## 7-- Challenges
 
 -   Change the colours
 
@@ -156,12 +153,9 @@ friend.
 
 -   How would you detect a winner (advanced!)
 
-#Taken and adapted from http://www.grantjenks.com/docs/freegames/tictactoe.html
+## Some challenge solutions
 
-Some challenge solutions
-========================
-
--   Add logic to prevent drawing several marks on the same square
+### Add logic to prevent drawing several marks on the same square
 
 `main.py`
 
@@ -222,7 +216,7 @@ def tap(x, y):
   
 Screen().setup(420, 420, 370, 0)
 hideturtle()
-Screen().tracer(False)
+Screen().tracer(0, 0)
 draw_grid()
 update()
 Screen().onscreenclick(tap)
@@ -235,12 +229,6 @@ done()
 class State:
   def __init__(self):
     self.player = 0
-    self.grid = [[None, None, None],
-                 [None, None, None],
-                 [None, None, None]]
-  
-  def reset(self):
-    self.player = not self.player
     self.grid = [[None, None, None],
                  [None, None, None],
                  [None, None, None]]
@@ -260,7 +248,7 @@ class State:
     return dic[(x, y)]
 ```
 
--   How would you detect a winner (advanced!)
+### How would you detect a winner (advanced!)
 
 `main.py`
 
@@ -337,13 +325,13 @@ def restart():
   
 Screen().setup(420, 420, 370, 0)
 hideturtle()
-Screen().tracer(0,0)
+Screen().tracer(0, 0)
 draw_grid()
 update()
 Screen().onscreenclick(tap)
 done()
 ```
-`check\_win.py`
+`check_win.py`
 
 ```python
 def is_win(grid, row, column):
