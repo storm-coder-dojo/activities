@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
+baseurl: /activities
 collections:
   python:
     output: true
