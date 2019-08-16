@@ -1,7 +1,7 @@
 ---
 Title: Noughts and crosses
 category: python
-order: 2
+order: 1
 ---
 In this activity, we will be re- making Noughts and Crosses with the
 Python programming language and using the Turtle Library.

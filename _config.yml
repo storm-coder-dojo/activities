@@ -7,6 +7,6 @@ defaults:
       path: ""
       type: "python"
     values:
-      layout: "default"
+      layout: "activity"
     
   

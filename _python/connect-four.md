@@ -1,7 +1,8 @@
 ---
 Title: Connect four
 category: python
-order: 1
+order: 2
+description: Connect 4 using the python language and turtle drawing library
 ---
 
 # Connect four

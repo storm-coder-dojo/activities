@@ -1,0 +1,20 @@
+---
+title: Storm Coder Dojo activities
+layout: default
+---
+
+<section>
+  {% for collection in site.collections %}
+  {% if collection.label != "posts" %}
+  <h2>{{collection.label | capitalize}}</h2>
+  <ul>
+    {% assign docs = collection.docs | sort: 'order'%}
+    {% for doc in docs %}
+    <li>
+      <a href="{{doc.url}}">{{doc.title}}</a>
+    </li>
+    {% endfor %}
+    {% endif %}
+  </ul>
+  {% endfor %}
+</section>
