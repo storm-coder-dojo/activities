@@ -11,7 +11,7 @@ layout: default
     {% assign docs = collection.docs | sort: 'order'%}
     {% for doc in docs %}
     <li>
-      <a href="{{doc.url}}">{{doc.title}}</a>
+      <a href="{{site.url}}{{doc.url}}">{{doc.title}}</a>
     </li>
     {% endfor %}
     {% endif %}
