@@ -143,6 +143,10 @@ done()
 That's it. Now you should be able to play Noughts and Crosses against a
 friend.
 
+### Solution on trinket
+<iframe src="https://trinket.io/embed/python/5db1615801" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+
 ## 7-- Challenges
 
 -   Change the colours
@@ -247,6 +251,8 @@ class State:
     }
     return dic[(x, y)]
 ```
+### Solution on trinket
+<iframe src="https://trinket.io/embed/python/04c1ba2b52" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 
 ### How would you detect a winner (advanced!)
 
@@ -294,7 +300,7 @@ def tap(x, y):
     x = floor(x)
     y = floor(y)
     player = state.player
-    grid = state.grid;
+    grid = state.grid
     item = state.get_grid_item(x, y)
     
     if(grid[item[0]][item[1]] is not None):
@@ -386,3 +392,5 @@ class State:
     else:
       return self.players[0]
 ```
+### Solution on trinket
+<iframe src="https://trinket.io/embed/python/7a1550a42e" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
