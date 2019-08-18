@@ -68,7 +68,7 @@ os.system('clear')
 Now we'll make the rocket go in a constant loop from the bottom of the screen to the top:
 ```python
 distance_from_top -= 1
-if distance_from_top <0:
+if distance_from_top < 0:
     distance_from_top = 20
 ```
 
