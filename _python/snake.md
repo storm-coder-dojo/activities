@@ -189,7 +189,7 @@ In the `move` function, replace the call to `snake.pop(0)` so that it looks like
 ```python
   if head == food:
     food[0] = randrange(-15, 15) * 10
-    food[0] = randrange(-15, 15) * 10
+    food[1] = randrange(-15, 15) * 10
   else:
     snake.pop(0)
 ```
@@ -258,7 +258,7 @@ def move():
   
   if head == food:
     food[0] = randrange(-15, 15) * 10
-    food[0] = randrange(-15, 15) * 10
+    food[1] = randrange(-15, 15) * 10
   else:
     snake.pop(0)
     
@@ -298,3 +298,4 @@ To extend your program, try one of the following challenges:
 * Make the snake go faster as it grows longer.
 * Instead of the game finishing when you hit the edge of the screen, make the snake re-appear at the opposite edge of the screen.
 
+A full listing with challenges is available here: [https://trinket.io/python/e1dbb04c95](https://trinket.io/python/e1dbb04c95)
