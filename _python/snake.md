@@ -75,7 +75,7 @@ def move():
 ```
 
 This function first clears the existing screen, then loops through every segment of our snake
-and draws a black square in the background.   The call to 'update()' then displays all of the 
+and draws a black square in the background.   The call to `update()` then displays all of the 
 background drawing.  The final line sets a timer of 100 milliseconds before calling the `move` function 
 again.
 
@@ -138,6 +138,9 @@ item in our list of snake segments (`snake[-1]`).  We then add this (`append`) t
 and finally remove the end of the snake (`pop`).  This should leave us with a snake of the same length (currently one square),
 but that has moved one square forward.
 
+Try running your program.  Use the arrow keys to change direction.  After clicking run, you will need to click on the 
+output window so that the program can start listening for your keypresses.
+
 ## 4-- Check for the edge of the screen
 
 Our game finishes if the head of our snake goes off of the screen.  We can do this with a simple check in our 
@@ -150,7 +153,7 @@ def inside(head):
 ```
 
 If we pass the head of our snake into this function, it will check whether the x and y coordinates are inside the boundaries
-of the screen.  We need to call this within our `move` function.  Add the following code just before the `clear()` call:
+of the screen.  We need to call this within our `move` function.  Add the following code just before the `snake.append(head)` call:
 
 ```python
   if not inside(head):
@@ -181,7 +184,7 @@ At the top of your code, add another import:
 from random import randrange
 ```
 
-In the `move` function, change the call to `snake.pop(0)` so that it looks like this:
+In the `move` function, replace the call to `snake.pop(0)` so that it looks like this:
 
 ```python
   if head == food:
@@ -189,6 +192,11 @@ In the `move` function, change the call to `snake.pop(0)` so that it looks like 
     food[0] = randrange(-15, 15) * 10
   else:
     snake.pop(0)
+```
+We also need to draw the food on the screen.  After the call to `clear()`, add the following line:
+
+```python
+draw_square(food[0], food[1], 9, 'green')
 ```
 
 Our snake should now move around the screen, and extend by one segment every time we eat some food.
@@ -278,10 +286,13 @@ move()
 done()
 ```
 
+A full listing is available here: [https://trinket.io/python/eed9b1f740](https://trinket.io/python/eed9b1f740)
+
 ## Challenges
 
 To extend your program, try one of the following challenges:
 
+* Don't move the snake until the player presses a direction.
 * Write "Game Over" on the screen when the game finishes.
 * Draw a box around the playing area so it is easier to see the edges.
 * Make the snake go faster as it grows longer.
