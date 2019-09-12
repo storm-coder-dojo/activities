@@ -160,8 +160,9 @@ done()
 ## Challenges
 To extend your program, try one of the following challenges:
 
-* Don't start the game until a key is press
-* Make the bikes goe faster as their tails grow longer.
-* Instead of the game finishing when you hit the edge of the screen, make the snake re-appear at the opposite edge of the screen.
+* Don't start the game until a key is pressed
+* Make the bikes go faster or slower
+* Add a border to the edge of the screen
+* Instead of the game finishing when you hit the edge of the screen, make the bikes re-appear at the opposite edge of the screen.
 
 A full listing with challenges is available here: [http://bit.ly/TronChallenges](http://bit.ly/TronChallenges)
