@@ -44,7 +44,7 @@ t.speed('fastest')
 
 ## 2 - The for loop
 
-Write a for loop for a range of 200:
+Write a [for loop](https://www.scaler.com/topics/python/for-loop-in-python/) for a range of 200:
 ```python
 for x in range(200):
 ```
